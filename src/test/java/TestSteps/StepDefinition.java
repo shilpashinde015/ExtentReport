@@ -1,7 +1,6 @@
 package TestSteps;
 
 import PageObject.GooglePage;
-import TestRunner.testRunner;
 import com.aventstack.extentreports.Status;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -65,7 +64,6 @@ public class StepDefinition {
     @Then("^i should see \"([^\"]*)\" as (\\d+) of the suggested search$")
     public void iShouldSeeAsOfTheSuggestedSearchString (String suggestion, Integer arg1) throws Throwable {
 
-        //System.out.print(googleUrl.verifySuggestionExist(suggestion, arg1));
         Assert.assertTrue(googleUrl.verifySuggestionExist(suggestion,arg1));
         test1.pass("Suggestion box working properly !");
 

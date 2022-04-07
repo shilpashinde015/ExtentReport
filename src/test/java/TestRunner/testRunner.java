@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeClass;
 
 
 @CucumberOptions(plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        features = "src/test/java/TestSteps/google.feature", glue = "TestSteps")
+        features = { "src/test/java/TestSteps/google.feature","src/test/java/TestSteps/Login.feature"}, glue = "TestSteps")
 
 public class testRunner extends AbstractTestNGCucumberTests {
     public static ExtentSparkReporter htmlReporter;
